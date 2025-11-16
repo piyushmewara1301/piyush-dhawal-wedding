@@ -2,11 +2,12 @@
   "name": "misty-wedding-site",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://piyushmewara1301.github.io/piyush-dhawal-wedding",
   "dependencies": {
+    "framer-motion": "^10.16.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "framer-motion": "^10.16.4"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -25,5 +26,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
