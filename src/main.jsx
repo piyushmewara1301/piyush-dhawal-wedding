@@ -4,8 +4,5 @@ import App from "./App";
 import "./index.css";
 import ComingSoon from "./Comingsoon";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <ComingSoon />
-  </React.StrictMode>
-);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<ComingSoon />);
