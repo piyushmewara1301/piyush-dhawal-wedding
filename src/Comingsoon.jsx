@@ -69,7 +69,7 @@ const ComingSoon = () => {
         className="mb-8"
       >
        <img
-        src="/images/logo.jpeg"
+        src="/piyush-dhawal-wedding/images/logo.jpeg"
         alt="Wedding Logo"
         className="w-40 h-40 object-cover drop-shadow-lg rounded-full"
         />
