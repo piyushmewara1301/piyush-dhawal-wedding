@@ -77,13 +77,26 @@ const ComingSoon = () => {
 
       {/* Heading */}
       <motion.h1
-        className="text-4xl md:text-5xl font-bold text-[#a47c48] text-center"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        Piyush ❤️ Dhawal
-      </motion.h1>
+  className="relative ext-5xl md:text-6xl font-[Great_Vibes] text-center text-[#a47c48]"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+>
+  Piyush ❤️ Dhawal
+
+  {/* Shine effect */}
+  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-[shine_2.5s_ease-in-out_infinite]" />
+</motion.h1>
+
+<style>
+{`
+@keyframes shine {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+  100% { transform: translateX(100%); }
+}
+`}
+</style>
 
       <p className="mt-3 text-lg md:text-xl opacity-90 text-center">
         Our wedding website is coming soon!
@@ -118,14 +131,30 @@ const ComingSoon = () => {
       </motion.div>
 
       {/* Bottom text */}
-      <motion.p
-        className="mt-10 text-[#7a5e3c] text-center text-sm md:text-base"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-      >
-        Save the Dates · February 9–10, 2026 · Pushkar
-      </motion.p>
+    <motion.div
+  className="mt-12 text-center"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 1 }}
+>
+  <motion.p
+    className="text-[#a47c48] text-sm md:text-lg"
+    initial={{ opacity: 0, y: 10 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, delay: 1 }}
+  >
+    Save the Dates · February 9–10, 2026 · Pushkar
+  </motion.p>
+
+  <motion.div
+    className="mx-auto mt-2 w-32 h-[2px] bg-[#d6b98d] rounded-full"
+    initial={{ scaleX: 0 }}
+    animate={{ scaleX: 1 }}
+    transition={{ duration: 1.2, ease: "easeOut", delay: 1.2 }}
+  />
+</motion.div>
+
+
     </section>
   );
 };
