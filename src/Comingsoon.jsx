@@ -77,7 +77,7 @@ const ComingSoon = () => {
 
       {/* Heading */}
       <motion.h1
-  className="relative ext-5xl md:text-6xl font-[Great_Vibes] text-center text-[#a47c48]"
+  className="text-4xl md:text-5xl font-bold text-[#a47c48] text-center"
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 1 }}
