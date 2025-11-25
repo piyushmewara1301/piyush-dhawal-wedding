@@ -66,6 +66,33 @@ const ComingSoon = () => {
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1 }}
+        className="mb-1"
+      >
+       <img
+        src="/piyush-dhawal-wedding/images/ganeshji.png"
+        alt="Gaensh Ji"
+        className="w-30 h-40"
+        />
+      </motion.div>
+
+      <motion.div
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="mb-2"
+      >
+       <img
+        src="/piyush-dhawal-wedding/images/mantra.png"
+        alt="Gaensh Ji"
+        className="w-25 h-20"
+        />
+      </motion.div>
+
+      {/* Logo */}
+      <motion.div
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1 }}
         className="mb-8"
       >
        <img
@@ -77,7 +104,7 @@ const ComingSoon = () => {
 
       {/* Heading */}
       <motion.h1
-  className="text-4xl md:text-5xl font-bold text-[#a47c48] text-center"
+  className="font-vibes text-4xl md:text-5xl text-[#a47c48] text-center"
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 1 }}
@@ -98,7 +125,7 @@ const ComingSoon = () => {
 `}
 </style>
 
-      <p className="mt-3 text-lg md:text-xl opacity-90 text-center">
+      <p className="mt-3 text-sm md:text-lg opacity-90 text-center">
         Our wedding website is coming soon!
       </p>
 

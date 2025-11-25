@@ -9,7 +9,8 @@ module.exports = {
         dark: "#3a2f2b"
       },
       fontFamily: {
-        serif: ["Playfair Display", "serif"]
+        serif: ["Playfair Display", "serif"],
+        vibes: ['"Great Vibes"', 'cursive'],
       }
     },
   },
