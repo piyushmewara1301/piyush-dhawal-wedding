@@ -71,7 +71,7 @@ const ComingSoon = () => {
        <img
         src="/piyush-dhawal-wedding/images/new-logo.jpeg"
         alt="Wedding Logo"
-        className="w-40 h-40"
+        className="w-60 h-60"
         />
       </motion.div>
 
