@@ -147,13 +147,13 @@ const ComingSoon = () => {
 `}
 </style>
 
-      <p className="mt-3 text-sm md:text-lg opacity-90 text-center">
+      <p className="mt-1 text-sm md:text-lg opacity-90 text-center">
         Our wedding website is coming soon!
       </p>
 
       {/* Countdown */}
       <motion.div
-        className="mt-10 grid grid-cols-4 gap-4 text-center"
+        className="mt-3 grid grid-cols-4 gap-4 text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 1 }}
@@ -181,7 +181,7 @@ const ComingSoon = () => {
 
       {/* Bottom text */}
     <motion.div
-  className="mt-12 text-center"
+  className="mt-3 text-center"
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   transition={{ delay: 1 }}
