@@ -66,7 +66,7 @@ const ComingSoon = () => {
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1 }}
-        className="mb-1"
+        className="mb-0"
       >
        <img
         src="/piyush-dhawal-wedding/images/ganeshji.png"
@@ -168,7 +168,7 @@ const ComingSoon = () => {
 
           return (
             <div key={i}>
-              <div className="text-3xl md:text-4xl font-bold text-[#c19a6b]">
+              <div className="text-xl md:text-2xl font-bold text-[#c19a6b]">
                 {String(values[i]).padStart(2, "0")}
               </div>
               <div className="mt-1 text-sm tracking-wide text-[#7a5e3c]">
