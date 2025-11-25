@@ -28,7 +28,7 @@ const ComingSoon = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center bg-[#fef7e9] text-[#5a4328] px-6 relative overflow-hidden">
+    <section className="h-screen w-screen flex flex-col items-center justify-center bg-[#fef7e9] text-[#5a4328] px-6 relative overflow-hidden">
 
       {/* Floating golden sparkles */}
       <motion.div
@@ -120,7 +120,7 @@ const ComingSoon = () => {
        <img
         src="/piyush-dhawal-wedding/images/new-logo.jpeg"
         alt="Wedding Logo"
-        className="w-60 h-50"
+        className="w-60 h-45"
         />
       </motion.div>
 
