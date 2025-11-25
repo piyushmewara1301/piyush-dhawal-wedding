@@ -71,7 +71,7 @@ const ComingSoon = () => {
        <img
         src="/piyush-dhawal-wedding/images/ganeshji.png"
         alt="Gaensh Ji"
-        className="w-30 h-40"
+        className="w-20 h-30"
         />
       </motion.div>
 
@@ -120,7 +120,7 @@ const ComingSoon = () => {
        <img
         src="/piyush-dhawal-wedding/images/new-logo.jpeg"
         alt="Wedding Logo"
-        className="w-60 h-60"
+        className="w-60 h-50"
         />
       </motion.div>
 
