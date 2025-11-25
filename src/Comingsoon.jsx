@@ -76,13 +76,35 @@ const ComingSoon = () => {
       </motion.div>
 
       <motion.div
+  initial={{ scale: 0.9, opacity: 0 }}
+  animate={{ scale: 1, opacity: 1 }}
+  transition={{ duration: 1 }}
+  className="mb-2 flex items-center justify-center gap-3"
+>
+  {/* Left vertical line */}
+  <div className="w-[1px] h-6 bg-[#e1b235]"></div>
+  <div className="w-[1px] h-6 bg-[#e1b235]"></div>
+
+  {/* Image */}
+  <img
+    src="/piyush-dhawal-wedding/images/ganeshmantra.png"
+    alt="Ganesh Mantra"
+    className="h-6"
+  />
+
+  {/* Right vertical line */}
+  <div className="w-[1px] h-6 bg-[#e1b235]"></div>
+  <div className="w-[1px] h-6 bg-[#e1b235]"></div>
+</motion.div>
+
+      <motion.div
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1 }}
         className="mb-2"
       >
        <img
-        src="/piyush-dhawal-wedding/images/mantra.png"
+        src="/piyush-dhawal-wedding/images/finalmantra.png"
         alt="Gaensh Ji"
         className="w-25 h-20"
         />
