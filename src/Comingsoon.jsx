@@ -168,7 +168,7 @@ const ComingSoon = () => {
 
           return (
             <div key={i}>
-              <div className="text-xl md:text-2xl font-bold text-[#c19a6b]">
+              <div className="font-vibes text-xl md:text-2xl font-bold text-[#c19a6b]">
                 {String(values[i]).padStart(2, "0")}
               </div>
               <div className="mt-1 text-sm tracking-wide text-[#7a5e3c]">
