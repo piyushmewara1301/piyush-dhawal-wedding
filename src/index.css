@@ -2,11 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+body {
   margin: 0;
   padding: 0;
-  overflow: hidden; /* 🔒 Prevent scrolling */
-  height: 100%;
 }
 
 /* Responsive helpers for the app (desktop-first) */
