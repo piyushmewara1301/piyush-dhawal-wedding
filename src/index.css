@@ -1,74 +1,299 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 body {
   margin: 0;
-  padding: 0;
+  background: #FAF7F2;
+  font-family: 'Lato', sans-serif;
 }
 
-/* Responsive helpers for the app (desktop-first) */
-.main-nav { display: flex; gap: 12px; align-items: center; }
-.mobile-button { display: none; }
+/* HEADER */
+.header-premium {
+  background: #fef7e9;
+  position: sticky;
+  top: 0;
+  padding: 10px 0;
+  backdrop-filter: blur(8px);
+  z-index: 100;
+}
 
-.hero-grid { display: grid; grid-template-columns: 1fr 420px; gap: 24px; align-items: center; }
-.hero-main { width: 100%; height: 520px; object-fit: cover; border-radius: 12px; }
-.hero-small { position: absolute; right: 40px; top: 48px; width: 220px; height: 300px; object-fit: cover; border-radius: 8px; border: 6px solid white; }
-.side-image { width: 100%; height: 120px; object-fit: cover; border-radius: 8px; }
-.gallery-img { width: 100%; height: 220px; object-fit: cover; display: block; }
-.container { width: 100%; max-width: 100%; margin: 0; padding: 24px 48px; box-sizing: border-box; }
-.footer-fixed { position: fixed; left: 0; right: 0; bottom: 0; padding: 12px 20px; text-align: center; color: #3a2f2b; background: #fffdfb; border-top: 1px solid #e4d3c2; z-index: 60; }
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-/* Small screens */
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-gold {
+  width: 60px;
+  height: 60px;
+}
+
+.couple-name {
+  font-family: "Great Vibes";
+  color: #b18b73;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.desktop-nav {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-premium {
+  text-decoration: none;
+  font-size: 26px;
+  font-family: "Great Vibes";
+  color: #3a2f2b;
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #3a2f2b;
+}
+
 @media (max-width: 768px) {
-  .container { padding: 16px 20px; }
-  .main-nav { display: none; }
-  .mobile-button { display: inline-block; }
-  .hero-grid { grid-template-columns: 1fr; }
-  .hero-main { height: 320px; border-radius: 10px; }
-  .hero-small { right: 16px; top: 30px; width: 160px; height: 220px; }
-  .side-image { height: 100px; }
-  .gallery-img { height: 160px; }
-  .footer-fixed { padding: 10px 12px; }
+  .desktop-nav { display: none; }
+  .mobile-toggle { display: block; }
 }
 
-/* Reduce motion preference */
-@media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; animation: none !important; }
+/* DRAWER */
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 80;
 }
 
-/* Modern styling additions */
-:root{
-  --bg: #f6eee8;
-  --surface: #fffdfb;
-  --accent: #b18b73;
-  --accent-2: linear-gradient(90deg, rgba(193,147,113,0.12), rgba(193,147,113,0.02));
-  --text: #3a2f2b;
-  --muted: #a38873;
-  --glass: rgba(255,255,255,0.65);
+.drawer-panel {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 100vh;
+  background: #FAF7F2;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  z-index: 100;
 }
 
-.header { background: var(--bg); border-bottom: 1px solid #e9dfd5; position: sticky; top: 0; z-index: 70; backdrop-filter: blur(6px); }
-.brand { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--text); display: flex; align-items: center; gap: 10px; }
-.brand .logo { width: 56px; height: 56px; border-radius: 999px; background: linear-gradient(180deg, rgba(177,139,115,0.12), rgba(177,139,115,0.06)); display: grid; place-items: center; color: var(--text); font-weight: 800; }
-
-.card { background: linear-gradient(180deg, var(--surface), rgba(255,255,255,0.98)); border-radius: 14px; padding: 18px; box-shadow: 0 12px 40px rgba(28,20,16,0.06); border: 1px solid rgba(58,47,43,0.04); }
-.card.soft { box-shadow: 0 8px 30px rgba(28,20,16,0.04); }
-
-.btn { border-radius: 10px; padding: 10px 14px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: transform .18s ease, box-shadow .18s ease; }
-.btn:active{ transform: translateY(1px); }
-.btn-primary { background: var(--accent); color: white; box-shadow: 0 8px 24px rgba(177,139,115,0.12); }
-.btn-ghost { background: transparent; border: 1px solid rgba(58,47,43,0.06); color: var(--text); }
-
-.nav-link { color: var(--text); padding: 8px 10px; border-radius: 8px; text-decoration: none; transition: background .18s ease, transform .12s ease; }
-.nav-link:hover{ background: rgba(177,139,115,0.06); transform: translateY(-2px); }
-
-.hero-overlay { background: var(--accent-2); border-radius: 8px; padding: 10px; }
-
-.muted { color: var(--muted); }
-
-.modern-footer { display: flex; justify-content: center; align-items: center; gap: 8px; font-size: 14px; }
-
-@media (min-width: 1400px) {
-  .container { padding-left: clamp(48px, 6vw, 120px); padding-right: clamp(48px, 6vw, 120px); }
+.drawer-link {
+  text-decoration: none;
+  font-size: 26px;
+  font-family: "Great Vibes";
+  color: #3a2f2b;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(177,139,115,0.25);
 }
+
+/* HERO */
+.hero-full {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-full::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.4), rgba(0,0,0,0));
+}
+
+.hero-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.hero-title {
+  font-family: "Great Vibes";
+  font-size: 36px;
+  color: white;
+  white-space: nowrap;
+}
+
+.hero-title span {
+  color: #b18b73;
+}
+
+.hero-date {
+  margin-top: 6px;
+  font-size: 20px;
+  color: #F1EAE0;
+}
+
+/* Timer */
+.timer-wrapper {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.timer-box {
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(6px);
+  color: white;
+}
+
+.timer-value {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.timer-label {
+  font-size: 13px;
+}
+
+/* OUR STORY */
+.our-story-section {
+  max-width: 850px;
+  margin: 80px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.gold-divider {
+  height: 3px;
+  background: #b18b73;
+  width: 120px;
+  margin: auto;
+  border-radius: 4px;
+}
+
+.our-story-title {
+  margin-top: 20px;
+  font-size: 48px;
+  font-family: "Great Vibes";
+  color: #b18b73;
+}
+
+.story-pre {
+  white-space: pre-wrap;
+  font-size: 18px;
+  line-height: 1.75;
+  font-family: Lato, sans-serif;
+  color: #3a2f2b;
+  margin-top: 20px;
+}
+
+/* VIDEO CAROUSEL */
+.video-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.video-title {
+  font-family: "Playfair Display";
+  font-size: 34px;
+  color: #b18b73;
+  margin-bottom: 20px;
+}
+
+.video-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 24px;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+}
+
+.video-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.video-item {
+  min-width: 300px;
+  background: white;
+  padding-bottom: 12px;
+  border-radius: 12px;
+  scroll-snap-align: center;
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.active-video {
+  transform: scale(1.15);
+  border-color: #b18b73;
+  box-shadow: 0 14px 32px rgba(0,0,0,0.2);
+}
+
+.carousel-thumb,
+.carousel-iframe {
+  width: 100%;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.video-caption {
+  margin-top: 8px;
+  font-weight: 600;
+  font-family: "Great Vibes";
+  font-size: 20px;
+  color: #3a2f2b;
+}
+
+.carousel-controls {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.carousel-controls button {
+  padding: 12px 18px;
+  background: #b18b73;
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+
+/* FOOTER */
+.footer-premium {
+  text-align: center;
+  padding: 18px;
+  margin-top: 40px;
+  background: white;
+  border-top: 1px solid #e8e2d9;
+  color: #3a2f2b;
+}
+
+/* COMING SOON */
+.comingsoon-page {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comingsoon-content h1 {
+  font-family: "Great Vibes";
+  font-size: 60px;
+  text-align: center;
+  color: #b18b73;
+}
+
+.comingsoon-content p {
+  font-size: 18px;
+  text-align: center;
+  opacity: 0.8;
+}
+
