@@ -98,10 +98,13 @@ body {
 }
 
 /* HERO */
-.hero-full {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+@media (max-width: 768px) {
+  .hero-full {
+    height: 100vh;
+    background-size: cover !important;
+    background-position: 50% 50% !important;
+    background-repeat: no-repeat;
+  }
 }
 
 .hero-full::after {
@@ -113,7 +116,8 @@ body {
 
 .hero-content {
   position: absolute;
-  top: 40%;
+  top: 52%;
+  bottom: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -132,7 +136,6 @@ body {
 }
 
 .hero-date {
-  margin-top: 6px;
   font-size: 20px;
   color: #F1EAE0;
 }
@@ -161,6 +164,36 @@ body {
 .timer-label {
   font-size: 13px;
 }
+
+/* -----------------------
+   Mobile Responsive Fix
+------------------------ */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 26px;
+  }
+
+  .hero-date {
+    font-size: 16px;
+  }
+
+  .timer-wrapper {
+    gap: 10px;
+  }
+
+  .timer-box {
+    padding: 8px 10px;
+  }
+
+  .timer-value {
+    font-size: 20px;
+  }
+
+  .timer-label {
+    font-size: 11px;
+  }
+}
+
 
 /* OUR STORY */
 .our-story-section {

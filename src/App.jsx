@@ -37,9 +37,8 @@ function Header({ onOpen }) {
   return (
     <header className="header-premium">
       <div className="header-inner">
-
         <div className="logo-group">
-          <img src="/images/new-logo.jpeg" className="logo-gold" alt="logo" />
+          <img src={`${process.env.PUBLIC_URL}/images/new-logo.jpeg`} className="logo-gold" alt="logo" />
           <h2 className="couple-name">Piyush ♥ Dhawal</h2>
         </div>
 
@@ -103,11 +102,11 @@ function Hero() {
   const heroStyle = {
     backgroundImage: `url(${process.env.PUBLIC_URL}/images/cover_photo.png)`,
     backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundAttachment: "fixed",
+    // backgroundPosition: "50% 10%",
+    // backgroundAttachment: "fixed",
     height: "100vh",
     width: "100%",
-    position: "relative"
+    // position: "relative"
   };
 
   const { days, hours, minutes, seconds } = useCountdown(
@@ -120,9 +119,7 @@ function Hero() {
         <h1 className="hero-title">
           Piyush <span>♥</span> Dhawal
         </h1>
-
         <p className="hero-date">February 9–10, 2026 · Pushkar</p>
-
         <div className="timer-wrapper">
           {[{ label: "Days", v: days }, { label: "Hours", v: hours },
             { label: "Minutes", v: minutes }, { label: "Seconds", v: seconds }].map((x) => (
@@ -222,7 +219,7 @@ function VideoCarousel() {
         whileInView={{ width: "120px" }}
         transition={{ duration: 0.8 }}
       />
-     <motion.h2
+      <motion.h2
         className="our-story-title"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -257,6 +254,7 @@ function VideoCarousel() {
           );
         })}
       </div>
+
       <div className="carousel-controls">
         <button onClick={() => scrollToIndex((index - 1 + videos.length) % videos.length)}>‹</button>
         <button onClick={() => scrollToIndex((index + 1) % videos.length)}>›</button>
@@ -269,7 +267,7 @@ export default function App() {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/piyush-dhawal-wedding">
       <Header onOpen={() => setDrawerOpen(true)} />
       <MobileDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} />
 
