@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/piyush-dhawal-wedding/static/css/main.630a2885.css",
-    "main.js": "/piyush-dhawal-wedding/static/js/main.61073b33.js",
+    "main.css": "/piyush-dhawal-wedding/static/css/main.3d3ae32a.css",
+    "main.js": "/piyush-dhawal-wedding/static/js/main.ee48bb08.js",
     "index.html": "/piyush-dhawal-wedding/index.html",
-    "main.630a2885.css.map": "/piyush-dhawal-wedding/static/css/main.630a2885.css.map",
-    "main.61073b33.js.map": "/piyush-dhawal-wedding/static/js/main.61073b33.js.map"
+    "main.3d3ae32a.css.map": "/piyush-dhawal-wedding/static/css/main.3d3ae32a.css.map",
+    "main.ee48bb08.js.map": "/piyush-dhawal-wedding/static/js/main.ee48bb08.js.map"
   },
   "entrypoints": [
-    "static/css/main.630a2885.css",
-    "static/js/main.61073b33.js"
+    "static/css/main.3d3ae32a.css",
+    "static/js/main.ee48bb08.js"
   ]
 }
