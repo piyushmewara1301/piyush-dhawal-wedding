@@ -1,3 +1,281 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .timeline-card {
+    @apply bg-white rounded-xl px-8 py-5 
+           shadow-[0_8px_30px_rgba(0,0,0,0.06)]
+           border border-[#f1e4cf]
+           min-w-[260px];
+  }
+
+  .timeline-title {
+    @apply text-sm tracking-widest font-semibold text-[#a47c48];
+  }
+
+  .timeline-time {
+    @apply text-sm text-[#7a5e3c] mt-1;
+  }
+
+  .timeline-dot {
+    @apply w-3 h-3 rounded-full bg-[#c19a6b] 
+           border-[3px] border-[#fffaf2] 
+           shadow-md;
+  }
+}
+
+@layer components {
+  /* Cards */
+  .timeline-card {
+    @apply bg-white rounded-xl px-8 py-5
+           border border-[#f1e4cf]
+           shadow-[0_12px_40px_rgba(0,0,0,0.06)]
+           transition-all duration-300
+           min-w-[260px];
+    font-family: "Inter", sans-serif;
+  }
+
+  /* Titles */
+  .timeline-title {
+    font-family: "Playfair Display", serif;
+    @apply text-[15px] tracking-wide text-[#9c7440];
+  }
+
+  /* Time badge */
+  .time-badge {
+    @apply inline-block px-3 py-1 rounded-full
+           text-xs font-medium tracking-wide
+           bg-[#c19a6b]/10 text-[#a47c48];
+  }
+
+  /* Center dot */
+  .timeline-dot {
+    @apply w-3 h-3 rounded-full bg-[#c19a6b]
+           border-[5px] border-[#c19a6b]
+           shadow-md;
+  }
+
+  /* Connector between dots ONLY */
+  .timeline-connector {
+    @apply w-[2px] h-48 bg-[#e0c9a6];
+  }
+
+  /* Day separator */
+  .day-separator {
+    @apply mb-20 flex items-center justify-center;
+  }
+
+  .day-separator::before,
+  .day-separator::after {
+    content: "";
+    @apply h-px w-24 bg-[#e7d4b5];
+  }
+
+  .day-separator span {
+    @apply mx-4 text-sm tracking-widest
+           text-[#a47c48] font-medium;
+    font-family: "Playfair Display", serif;
+  }
+}
+
+.venue-label {
+  @apply mt-2 flex items-center gap-1 text-xs text-[#8b6a3e];
+  font-family: "Inter", sans-serif;
+}
+
+.venue-icon {
+  @apply w-3 h-3 fill-[#c19a6b];
+}
+.menu-modern {
+  min-height: 100vh;
+  padding: 100px 24px 80px;
+  background: linear-gradient(
+    180deg,
+    #fffaf2 0%,
+    #fbf3e6 100%
+  );
+}
+
+/* Header */
+.menu-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.menu-header h1 {
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  font-family: "Great Vibes";
+  color: #b18b73;
+}
+
+.menu-meta {
+  margin-top: 14px;
+  color: #b18b73;
+  display: flex;
+  gap: 18px;
+  font-family: "Great Vibes";
+  justify-content: center;
+  font-size: 15px;
+}
+
+/* Grid */
+.menu-grid-modern {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+/* Card */
+.menu-card-modern {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255,255,255,0.5);
+  transition: all 0.35s ease;
+}
+
+.menu-card-modern:hover {
+  box-shadow:
+    0 20px 50px rgba(178, 150, 90, 0.18);
+}
+
+/* Section title */
+.menu-card-modern h3 {
+  text-transform: capitalize;
+  font-size: 20px;
+  align-content: center;
+  justify-content: center;
+  color: #b18b73;
+  font-family: "Great Vibes";
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.menu-card-modern h3::after {
+  content: "";
+  width: 36px;
+  height: 2px;
+  background: #b18b73;
+  font-family: "Great Vibes";
+  display: block;
+  margin-top: 6px;
+}
+
+/* Items */
+.menu-card-modern ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-card-modern li {
+  padding: 8px 0;
+  font-size: 15px;
+  color: #333;
+  border-bottom: 1px dashed rgba(0,0,0,0.08);
+}
+
+.menu-card-modern li:last-child {
+  border-bottom: none;
+}
+
+/* Empty state */
+.menu-empty {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #888;
+  font-size: 24px;
+}
+
+
+/* DATE SEPARATOR */
+.day-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+  color: #a47c48;
+  font-family: serif;
+  font-size: 36px;
+  letter-spacing: 0.05em;
+}
+
+.day-separator::before,
+.day-separator::after {
+  content: "";
+  height: 1px;
+  width: 80px;
+  background: #e0c9a6;
+  margin: 0 16px;
+}
+
+/* CARD */
+.timeline-card {
+  background: 
+#f7f7f7;
+  padding: 1.5rem 2rem;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0e2c8;
+  max-width: 360px;
+}
+
+/* TITLE */
+.timeline-title {
+  font-family: serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #8b6a3e;
+}
+
+/* TIME BADGE */
+.time-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: #f7efe3;
+  font-size: 0.75rem;
+  color: #8b6a3e;
+  margin-top: 0.25rem;
+}
+
+/* DOT */
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #c19a6b;
+}
+
+/* ICON */
+.timeline-icon {
+  width: 72px;
+  height: 64px;
+  opacity: 0.8;
+}
+
+/* VENUE */
+.venue-label {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #8b6a3e;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+
 body {
   margin: 0;
   background: #FAF7F2;
@@ -330,3 +608,65 @@ body {
   opacity: 0.8;
 }
 
+
+
+
+.directions-page {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.directions-title {
+  text-align: center;
+  font-size: 36px;
+  font-family: "Great Vibes";
+  color: #b18b73;
+  margin-bottom: 40px;
+}
+
+.directions-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.map-container {
+  height: 500px;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.hotel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hotel-card {
+  padding: 16px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.hotel-card h4 {
+  margin: 0 0 8px;
+}
+
+.hotel-card a {
+  color: #b9975b;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .directions-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .map-container {
+    height: 360px;
+  }
+}

@@ -1,6 +1,9 @@
 import React, { useEffect, useState, useRef, useMemo } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import Itinerary from "./Itinerary";
+import MenuPage from "./MenuPage";
+import Directions from "./Directions";
 
 // Countdown hook
 function useCountdown(targetISO) {
@@ -100,7 +103,7 @@ function MobileDrawer({ open, onClose }) {
 // HERO SECTION
 function Hero() {
   const heroStyle = {
-    backgroundImage: `url(${process.env.PUBLIC_URL}/images/cover_photo.png)`,
+    backgroundImage: `url(${process.env.PUBLIC_URL}/images/cover.webp)`,
     backgroundSize: "cover",
     // backgroundPosition: "50% 10%",
     // backgroundAttachment: "fixed",
@@ -189,11 +192,16 @@ And finally… they’re getting married. ❤️
 // VIDEO CAROUSEL
 function VideoCarousel() {
   const videos = useMemo(() => [
+    { id: "bWPv_umhpwg", caption: "25 Days To Go...krle waste of time." },
     { id: "eLxczJ3oNuM", caption: "Pre-Wedding Teaser" },
-    { id: "9HxPM_nkXSA", caption: "35 Days To Go" },
+    { id: "9HxPM_nkXSA", caption: "35 Days To Go..." },
     { id: "wekrB6k22zg", caption: "Milan Abhi Aadha Adhure hai" },
-    { id: "Al-Yn35YBHk", caption: "45 Days To Go" },
-    { id: "rKUio800zAU", caption: "Invitation Reveal" }
+    { id: "Al-Yn35YBHk", caption: "45 Days To Go..." },
+    { id: "rKUio800zAU", caption: "Invitation Reveal" },
+    { id: "GCnSWhpRNVc", caption: "First Invite: Ladkewalo ke Ghar" },
+    { id: "TLBTukfabrU", caption: "Saava Video – The Auspicious Beginning ✨" },
+    { id: "YWUkaIEwG3s", caption: "Teej Moments ❤️🌸" }
+    
   ], []);
 
   const [index, setIndex] = useState(0);
@@ -273,10 +281,10 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<><Hero /><OurStorySection /><VideoCarousel /></>} />
-        <Route path="/menu" element={<ComingSoon />} />
-        <Route path="/itinerary" element={<ComingSoon />} />
+        <Route path="/menu" element={<MenuPage />} />
+        <Route path="/itinerary" element={<Itinerary />} />
         <Route path="/gallery" element={<ComingSoon />} />
-        <Route path="/directions" element={<ComingSoon />} />
+        <Route path="/directions" element={<Directions />} />
       </Routes>
 
       <footer className="footer-premium">
